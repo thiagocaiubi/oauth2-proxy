@@ -20,6 +20,7 @@ type ProviderData struct {
 	// Auth request params & related, see
 	//https://openid.net/specs/openid-connect-basic-1_0.html#rfc.section.2.1.1.1
 	AcrValues        string
+	Audience         string
 	ApprovalPrompt   string // NOTE: Renamed to "prompt" in OAuth2
 	ClientID         string
 	ClientSecret     string

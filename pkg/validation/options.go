@@ -252,6 +252,7 @@ func parseProviderInfo(o *options.Options, msgs []string) []string {
 		Prompt:           o.Prompt,
 		ApprovalPrompt:   o.ApprovalPrompt,
 		AcrValues:        o.AcrValues,
+		Audience:         o.Audience,
 	}
 	p.LoginURL, msgs = parseURL(o.LoginURL, "login", msgs)
 	p.RedeemURL, msgs = parseURL(o.RedeemURL, "redeem", msgs)

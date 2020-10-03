@@ -107,6 +107,7 @@ type Options struct {
 
 	SignatureKey    string `flag:"signature-key" cfg:"signature_key"`
 	AcrValues       string `flag:"acr-values" cfg:"acr_values"`
+	Audience        string `flag:"audience" cfg:"audience"`
 	JWTKey          string `flag:"jwt-key" cfg:"jwt_key"`
 	JWTKeyFile      string `flag:"jwt-key-file" cfg:"jwt_key_file"`
 	PubJWKURL       string `flag:"pubjwk-url" cfg:"pubjwk_url"`
@@ -263,6 +264,7 @@ func NewFlagSet() *pflag.FlagSet {
 
 	flagSet.String("signature-key", "", "GAP-Signature request signature key (algorithm:secretkey)")
 	flagSet.String("acr-values", "", "acr values string:  optional")
+	flagSet.String("audience", "", "audience string:  optional")
 	flagSet.String("jwt-key", "", "private key in PEM format used to sign JWT, so that you can say something like -jwt-key=\"${OAUTH2_PROXY_JWT_KEY}\": required by login.gov")
 	flagSet.String("jwt-key-file", "", "path to the private key file in PEM format used to sign the JWT so that you can say something like -jwt-key-file=/etc/ssl/private/jwt_signing_key.pem: required by login.gov")
 	flagSet.String("pubjwk-url", "", "JWK pubkey access endpoint: required by login.gov")
